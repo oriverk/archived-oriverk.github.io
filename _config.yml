@@ -26,9 +26,14 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-theme: minima
+# theme: minima default
+remote_theme: fongandrew/hydeout # added
+
 plugins:
   - jekyll-feed
+   - jekyll-paginate # added
+  - jekyll-remote-theme # added
+  - github-pages # added
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
