@@ -37,8 +37,8 @@ plugins:
   - github-pages # added
 
 author:
-  name:           'Andrew Fong'
-  url:            https://twitter.com/fongandrewc
+  name: 'OriverK'
+  url: https://qiita.com/OriverK
 
 # Posts per page:
 paginate: 5
