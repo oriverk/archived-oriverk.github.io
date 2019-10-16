@@ -6,4 +6,4 @@ layout: page
 title: home
 ---
 
-![cycle-taiwan](http://oriverk.github.io/assets/img/cycle-taiwan.png)
+![cycle-taiwan](http://oriverk.github.io/assets/img/cycle-taiwan.jpg)
