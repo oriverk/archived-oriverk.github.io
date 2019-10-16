@@ -6,5 +6,4 @@ layout: page
 title: home
 ---
 
-My name is Yudai Oriver K. I am a Bachelor of Agriculture. 
-Now I am seeking engineer job in Japan.
+![cycle-taiwan](http://oriverk.github.io/assets/img/cycle-taiwan.png)

@@ -16,9 +16,7 @@
 title: "Yudai Oriver K"
 email: 
 description: >- # this means to ignore newlines until "baseurl:"
-  B.Agr. / 農学学士
-  Ruby / Java
-  転職活動中＠日本
+  B.Agr. 農学学士 / Ruby / Java / 転職活動中＠日本
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: not_you_die 
