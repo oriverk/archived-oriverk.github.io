@@ -21,7 +21,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: not_you_die 
 github_username: oriverk
-wantedly: 40060086
+wantedly: 40069986
 linkedin: yudai-k
 lapras: CF9OBXY
 qiita: OriverK
@@ -51,7 +51,7 @@ paginate: 5
 paginate_path: '/blog/page:num'
 
 sidebar_home_link: false
-sidebar_blog_link: '/blog'
+sidebar_blog_link: '/blog/'
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
