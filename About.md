@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+sidebar_sort_order: 1
 permalink: /about/
 ---
 
@@ -10,8 +11,8 @@ After graduation I worked at egg company at first. But I quited this and went to
 
 Now I’m seeking a engineer job for web apprication around server-side in Japan.
 
-最終学歴は農学学士ですが、研究室の卒業論文が画像処理を用いた農作物列検出に関する研究で、そこで初めてC++とOpenCVに触れました。
+農学学士。画像処理技術による農作物列検出に関する研究を卒業論文として研究し、そこで初めてC++とOpenCVに触れました。
 
-卒業後は鶏卵企業に勤めましたが辞め、その後わー金ホリデービザでオーストラリアに長期滞在し、プログラミング、特にRubyを中心に勉強していました。
+卒業後は鶏卵企業に勤めましたが辞め、その後ワーキングホリデーでオーストラリアに長期滞在し、プログラミング、特にRubyを中心に勉強していました。
 
 現在はWebアプリケーションにおけるサーバーサイドエンジニアとして転職する為、日本で活動しております。
