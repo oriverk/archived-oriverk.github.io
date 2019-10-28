@@ -277,9 +277,12 @@ pre { max-width: 100%; overflow-x: auto; }
 */
 body { color: rgba(255, 255, 255, 0.75); background-color: #202020; background-image: linear-gradient(to bottom, #323232, #0e0e0e); display: flex; flex-direction: column; min-width: 100vw; min-height: 100vh;}
 
-.home main {
+.page.home main {
   background-image: url("https://oriverk.github.io/cycle-taiwan.jpg");
   background-size: cover;
+}
+.page.home header, .page.home div.content{
+  opacity: 0;
 }
 
 #sidebar { flex: 0 0 auto; padding: 2rem; }
