@@ -1,9 +1,10 @@
-<!-- Twitter cards -->
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:site" content="@not_you_die"/>
 
 {% if page.title %}
 <meta name="twitter:title" content="{{ page.title }}"/>
+{% else %}
+<meta name="twitter:title" content="{{site.title}}" />
 {% endif %}
 
 {% if page.summary %}
@@ -13,8 +14,7 @@
 {% endif %}
 
 {% if page.image %}
-<meta name="twitter:image" content="{{ site.url }}{{ page.image }}"/>
+<meta name="twitter:image" content="{{ page.url }}/{{ page.image }}"/>
 {% else %}
-<meta name="twitter:image" content="{{ site.title_image }}"/>
+<meta name="twitter:image" content="{{ site.image }}"/>
 {% endif %}
-<!-- end of Twitter cards -->
