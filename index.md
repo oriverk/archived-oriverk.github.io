@@ -6,4 +6,3 @@ layout: page
 title: 
 ---
 
-![cycle-taiwan](cycle-taiwan.jpg)
