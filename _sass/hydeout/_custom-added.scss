@@ -1,6 +1,6 @@
 /* chnage style of background-image on page home */
 .page.home main{
-  background-image:url("{{site.url}}/{{cycle-tiwam.jpg}}");
+  background-image:url("{{site.url}}/{{site.image}}");
   background-position: right top;
   background-size:cover;
 }
