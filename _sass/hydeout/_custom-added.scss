@@ -1,0 +1,13 @@
+/* chnage style of background-image on page home */
+.page.home main{
+  background-image:url("{{site.url}}/{{cycle-tiwam.jpg}}");
+  background-position: right top;
+  background-size:cover;
+}
+.page.home .container header{
+  opacity:0  
+}
+.page.home .container div{
+  opacity:0;
+}
+
