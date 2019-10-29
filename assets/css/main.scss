@@ -1,0 +1,1038 @@
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* 1rem */
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+/* 1.25rem */
+@media (min-width: 49rem) {
+  html {
+    font-size: 1rem;
+  }
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+main, article, section {
+  display: block;
+}
+
+a {
+  color: #268bd2;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+
+  strong {
+    color: inherit;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1rem;
+  border-radius: 5px;
+  height: auto;
+}
+
+table {
+  margin-bottom: 1rem;
+  width: 100%;
+  font-size: 85%;
+  border: 1px solid #e5e5e5;
+  border-collapse: collapse;
+}
+
+td {
+  padding: .25rem .5rem;
+  border: 1px solid #e5e5e5;
+}
+
+th {
+  padding: .25rem .5rem;
+  border: 1px solid #e5e5e5;
+  text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+  td, th {
+    background-color: #f9f9f9;
+  }
+}
+
+input {
+  &[type="text"], &[type="email"], &[type="search"], &[type="submit"] {
+    padding: 1em 1.5em;
+    border: 1px solid #e5e5e5;
+    border-radius: 300px;
+  }
+}
+
+button {
+  padding: 1em 1.5em;
+  border: 1px solid #e5e5e5;
+  border-radius: 300px;
+  cursor: pointer;
+  background: transparent;
+  border-color: #e5e5e5;
+  color: #268bd2;
+  transition: color 0.6s ease-in-out, border-color 0.6s ease-in-out, background 0.6s ease-in-out;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  background: transparent;
+  border-color: #e5e5e5;
+  color: #268bd2;
+  transition: color 0.6s ease-in-out, border-color 0.6s ease-in-out, background 0.6s ease-in-out;
+}
+
+button:hover, input[type="submit"]:hover {
+  background: #268bd2;
+  border-color: #268bd2;
+  color: white;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.16);
+}
+
+h1, h2, h3, h4, h5, h6, .site-title {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #313131;
+  text-rendering: optimizeLegibility;
+}
+
+/* 2rem */
+h1 {
+  font-size: 1.5rem;
+}
+
+/* 1.5rem */
+h2 {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+/* 1.25rem */
+h3 {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+}
+
+/* 1rem */
+h4, h5, h6 {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+}
+
+/* 1rem */
+p {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+strong {
+  color: #303030;
+}
+
+/* 0.75rem */
+ul, ol, dl {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: .5rem;
+}
+
+hr {
+  position: relative;
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #fff;
+}
+
+abbr {
+  font-size: 85%;
+  font-weight: bold;
+  color: #555;
+  text-transform: uppercase;
+
+  &[title] {
+    cursor: help;
+    border-bottom: 1px dotted #e5e5e5;
+  }
+}
+
+blockquote {
+  padding: .5rem 1rem;
+  margin: .8rem 0;
+  color: #7a7a7a;
+  border-left: 0.25rem solid #e5e5e5;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 30em) {
+  blockquote {
+    padding-right: 5rem;
+    padding-left: 1.25rem;
+  }
+}
+
+a {
+  &[href^="#fn:"], &[href^="#fnref:"] {
+    display: inline-block;
+    margin-left: .1rem;
+    font-weight: bold;
+  }
+}
+
+.footnotes {
+  margin-top: 2rem;
+  font-size: 85%;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+a svg, .icon svg {
+  height: 1em;
+}
+
+a svg {
+  fill: #268bd2;
+}
+
+.icon {
+  vertical-align: middle;
+}
+
+.highlight {
+  .hll {
+    background-color: #ffc;
+  }
+
+  .c {
+    color: #999;
+  }
+
+  .err {
+    color: #a00;
+    background-color: #faa;
+  }
+
+  .k {
+    color: #069;
+  }
+
+  .o {
+    color: #555;
+  }
+
+  .cm {
+    color: #09f;
+    font-style: italic;
+  }
+
+  .cp {
+    color: #099;
+  }
+
+  .c1, .cs {
+    color: #999;
+  }
+
+  .gd {
+    background-color: #fcc;
+    border: 1px solid #c00;
+  }
+
+  .ge {
+    font-style: italic;
+  }
+
+  .gr {
+    color: #f00;
+  }
+
+  .gh {
+    color: #030;
+  }
+
+  .gi {
+    background-color: #cfc;
+    border: 1px solid #0c0;
+  }
+
+  .go {
+    color: #aaa;
+  }
+
+  .gp {
+    color: #009;
+  }
+
+  .gu {
+    color: #030;
+  }
+
+  .gt {
+    color: #9c6;
+  }
+
+  .kc, .kd, .kn, .kp, .kr {
+    color: #069;
+  }
+
+  .kt {
+    color: #078;
+  }
+
+  .m {
+    color: #f60;
+  }
+
+  .s {
+    color: #d44950;
+  }
+
+  .na {
+    color: #4f9fcf;
+  }
+
+  .nb {
+    color: #366;
+  }
+
+  .nc {
+    color: #0a8;
+  }
+
+  .no {
+    color: #360;
+  }
+
+  .nd {
+    color: #99f;
+  }
+
+  .ni {
+    color: #999;
+  }
+
+  .ne {
+    color: #c00;
+  }
+
+  .nf {
+    color: #c0f;
+  }
+
+  .nl {
+    color: #99f;
+  }
+
+  .nn {
+    color: #0cf;
+  }
+
+  .nt {
+    color: #2f6f9f;
+  }
+
+  .nv {
+    color: #033;
+  }
+
+  .ow {
+    color: #000;
+  }
+
+  .w {
+    color: #bbb;
+  }
+
+  .mf, .mh, .mi, .mo {
+    color: #f60;
+  }
+
+  .sb, .sc {
+    color: #c30;
+  }
+
+  .sd {
+    color: #c30;
+    font-style: italic;
+  }
+
+  .s2, .se, .sh {
+    color: #c30;
+  }
+
+  .si {
+    color: #a00;
+  }
+
+  .sx {
+    color: #c30;
+  }
+
+  .sr {
+    color: #3aa;
+  }
+
+  .s1 {
+    color: #c30;
+  }
+
+  .ss {
+    color: #fc3;
+  }
+
+  .bp {
+    color: #366;
+  }
+
+  .vc, .vg, .vi {
+    color: #033;
+  }
+
+  .il {
+    color: #f60;
+  }
+}
+
+.css {
+  .o {
+    color: #999;
+
+    + .nt {
+      color: #999;
+    }
+  }
+
+  .nt + .nt {
+    color: #999;
+  }
+}
+
+code, pre {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+code {
+  padding: .25em .5em;
+  font-size: 85%;
+  color: #bf616a;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+
+  code {
+    padding: 0;
+    font-size: 100%;
+    color: inherit;
+    background-color: transparent;
+  }
+}
+
+.highlight {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: .8rem;
+  line-height: 1.4;
+  background-color: #f9f9f9;
+  border-radius: .25rem;
+
+  pre {
+    margin-bottom: 0;
+    overflow-x: auto;
+  }
+
+  .lineno {
+    display: inline-block;
+    padding-right: .75rem;
+    padding-left: .25rem;
+    color: #999;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+}
+
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Layout
+ Styles for managing the structural hierarchy of the site. Hydeout features the large colored sidebar from Hyde that houses the site name, intro, and "footer" content. Sidebar is on top of content on mobile and expands into sidebar on larger width displays.
+ Sidebar CSS assumes HTML looks like this for post pages:
+ body > #sidebar > header (primary sidebar content -- i.e. title) > h1 (home page only, otherwise div or span) > secondary nav content we may want to hide on certain pages > .container > h1 (non-home page) > .content
+ Basic approach is to color in body, make sidebar background transparent, and then fill in the .container or .content elements depending on how far we want the sidebar or header to stretch.
+*/
+
+body {
+  color: rgba(255, 255, 255, 0.75);
+  background-color: #202020;
+  background-image: linear-gradient(to bottom, #323232, #0e0e0e);
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+/* home top page only */
+
+.page.home {
+  main {
+    background-image: url("https://oriverk.github.io/cycle-taiwan.jpg");
+    background-size: cover;
+  }
+
+  .container {
+    header, div {
+      opacity: 0;
+    }
+  }
+}
+
+/* ----- */
+
+#sidebar {
+  flex: 0 0 auto;
+  padding: 2rem;
+
+  .site-title {
+    font-family: "Abril Fatface", serif;
+    font-weight: normal;
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+
+    .back-arrow {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.container {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+
+  > .content {
+    flex-grow: 1;
+    padding-bottom: 4rem;
+  }
+}
+
+.content {
+  background: #fff;
+  color: #515151;
+  padding: 2rem;
+}
+
+/* ----------------------------------------------------------- Mobile view
+----------------------------------------------------------- */
+
+#sidebar {
+  header ~ {
+    *, nav {
+      display: none;
+    }
+  }
+
+  p.lead {
+    display: none;
+  }
+}
+
+.container > header {
+  color: white;
+  background: transparent;
+  margin: -1.5rem 2rem 2rem;
+
+  h1, h2 {
+    color: inherit;
+  }
+
+  h1:last-child, h2:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* ----------------------------------------------------------- Mobile view for home page)
+----------------------------------------------------------- */
+
+.home #sidebar {
+  text-align: center;
+
+  .site-title {
+    font-size: 3.25rem;
+  }
+
+  header ~ *, p.lead {
+    display: block;
+  }
+
+  header ~ nav {
+    display: flex;
+  }
+
+  > *:last-child {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ----------------------------------------------------------- Tablet / Desktop view
+----------------------------------------------------------- */
+@media (min-width: 49rem) {
+  body {
+    flex-direction: row;
+    height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    > * {
+      max-height: 100vh;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
+  /* Undo mobile CSS */
+
+  #sidebar, .home #sidebar {
+    width: 18rem;
+    text-align: left;
+  }
+
+  #sidebar > *:last-child, .home #sidebar > *:last-child {
+    margin-bottom: 0;
+  }
+
+  #sidebar {
+    .site-title {
+      font-size: 3.25rem;
+
+      .back-arrow {
+        display: none;
+      }
+    }
+
+    p.lead {
+      display: block;
+    }
+
+    header ~ {
+      * {
+        display: block;
+      }
+
+      nav {
+        display: flex;
+      }
+    }
+  }
+
+  .index #sidebar {
+    margin-bottom: 0;
+  }
+
+  .container {
+    background: #fff;
+    color: #515151;
+    padding: 4rem 4rem 0;
+    height: 100vh;
+
+    > {
+      header {
+        color: #313131;
+        margin: 0;
+
+        h1, h2 {
+          color: inherit;
+        }
+
+        h1:last-child, h2:last-child {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      * {
+        max-width: 38rem;
+        padding: 0;
+      }
+    }
+  }
+}
+
+/* ----------------------------------------------------------- Sidebar links + nav
+----------------------------------------------------------- */
+
+#sidebar {
+  a {
+    color: white;
+
+    svg, &:hover svg, &:focus svg, &.active svg {
+      fill: rgba(255, 255, 255, 0.85);
+    }
+
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+
+    &:hover.icon, &:focus.icon {
+      text-decoration: none;
+    }
+
+    &.active {
+      font-weight: bold;
+    }
+  }
+
+  .site-title {
+    color: white;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  nav {
+    display: flex;
+  }
+}
+
+#sidebar-nav-links {
+  flex-flow: column nowrap;
+}
+
+#sidebar-icon-links {
+  max-width: 100%;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+@media (min-width: 49rem) {
+  #sidebar-icon-links {
+    margin-left: -0.25em;
+    justify-content: flex-start;
+  }
+}
+
+#sidebar nav > {
+  * {
+    display: block;
+    line-height: 1.75;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+    display: inline-block;
+    margin: 0 0.25em;
+  }
+}
+
+/* ----------------------------------------------------------- Sticky sidebar
+ Set $sidebar-stick variable to affix sidebar contents to the bottom of the sidebar in tablets and up.
+----------------------------------------------------------- */
+@media (min-width: 49rem) {
+  body {
+    align-items: flex-end;
+  }
+}
+
+/* ----------------------------------------------------------- Reverse layout
+ Flip the orientation of the page by placing the `#sidebar` on the right.
+----------------------------------------------------------- */
+
+.masthead {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+
+.masthead-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #515151;
+
+  a {
+    color: inherit;
+  }
+
+  small {
+    font-size: 75%;
+    font-weight: 400;
+    opacity: .5;
+  }
+}
+
+article + *, .post-body ~ section {
+  padding-top: 2rem;
+  border-top: 1px solid #e5e5e5;
+  margin-top: 2rem;
+}
+
+article + * > {
+  h2:first-child, h3:first-child {
+    margin-top: 0;
+  }
+}
+
+.post-body ~ section > {
+  h2:first-child, h3:first-child {
+    margin-top: 0;
+  }
+}
+
+.post .content li + li, .page .content li + li {
+  margin-top: .25rem;
+}
+
+.page-title {
+  color: #313131;
+}
+
+.post-title {
+  color: #313131;
+
+  a {
+    color: #313131;
+  }
+}
+
+.page-title, .post-title {
+  margin-top: 0;
+}
+
+h2 {
+  &.post-title, &.page-title {
+    font-size: 2rem;
+  }
+}
+
+.post-meta {
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+  color: #767676;
+}
+
+.post-tags a {
+  font-size: 0.8em;
+  margin-right: 0.5rem;
+  white-space: nowrap;
+  opacity: 0.75;
+
+  .tag-name {
+    text-transform: capitalize;
+  }
+
+  &:hover {
+    text-decoration: none;
+    opacity: 1;
+  }
+}
+
+.posts-by-tag h2 {
+  text-transform: capitalize;
+}
+
+.posts-list {
+  padding-left: 0;
+  list-style: none;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  li {
+    small {
+      font-size: 75%;
+      color: #999;
+      white-space: nowrap;
+    }
+
+    a:hover {
+      color: #268bd2;
+      text-decoration: none;
+
+      small {
+        color: inherit;
+      }
+    }
+  }
+}
+
+button.disqus-load {
+  margin-top: 1em;
+}
+
+/* Pagination
+ Super lightweight (HTML-wise) blog pagination. Should only be visible when there is navigation available -- single buttons at top or bottom of each page.
+*/
+
+.pagination {
+  margin-bottom: 2rem;
+  color: #ccc;
+  text-align: center;
+
+  > a {
+    display: inline-block;
+    padding: 1em 1.5em;
+    border: solid #e5e5e5;
+    border-radius: 300px;
+    border-width: 1px;
+    width: 60%;
+    max-width: 18rem;
+    background: #fff;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.16);
+
+    &:hover {
+      background-color: #e5e5e5;
+    }
+  }
+}
+
+* + .pagination {
+  margin-top: 2rem;
+}
+
+.content .pagination:first-child {
+  margin-top: -4rem;
+}
+
+.index #sidebar {
+  padding-bottom: calc(2rem + 1em);
+}
+
+.home.index #sidebar {
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 49rem) {
+  .pagination > a {
+    box-shadow: none;
+
+    &:hover {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.16);
+    }
+  }
+
+  .content .pagination:first-child {
+    margin-top: 0;
+
+    + * {
+      padding-top: 2rem;
+      border-top: 1px solid #e5e5e5;
+      margin-top: 2rem;
+    }
+  }
+
+  .index #sidebar {
+    padding-bottom: 2rem;
+  }
+}
+
+.message {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: #717171;
+  background-color: #f9f9f9;
+}
+
+.search-row {
+  display: flex;
+  border: 1px solid #e5e5e5;
+  border-radius: 300px;
+  padding: 2px;
+
+  input {
+    border: 0;
+
+    + input {
+      margin-left: 2px;
+    }
+
+    &[type="text"], &[type="search"] {
+      flex-grow: 1;
+    }
+  }
+}
+
+.tags-list a {
+  margin-right: 0.5em;
+  white-space: nowrap;
+  opacity: 0.75;
+
+  .tag-count {
+    background: #268bd2;
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 0.25em;
+    border-radius: 1000px;
+    font-size: 0.75em;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+  }
+
+  &:hover {
+    text-decoration: none;
+    opacity: 1;
+  }
+}
+
+@keyframes posts-for-tag-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.posts-for-tag {
+  display: none;
+
+  &:target {
+    display: block;
+    animation: posts-for-tag-fade-in 0.6s ease-in-out;
+  }
+}

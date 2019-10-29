@@ -1,14 +1,5 @@
 source 'https://rubygems.org'
 
-# Hello! This is where you manage which Jekyll version is used to run.
-# When you want to use a different version, change it below, save the
-# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
-#
-#     bundle exec jekyll serve
-#
-# This will help ensure the proper Jekyll version is running.
-# Happy Jekylling!
-
 ## If you want to host your site on Github Pages Open Gemfile and delete
 # gem "jekyll", "~> 3.8.6"
 
@@ -38,3 +29,6 @@ end
 
 # Performance-booster for watching directories on Windows
 gem 'wdm', '~> 0.1.0', install_if: Gem.win_platform?
+
+# for scss on jekyll
+gem 'jekyll-coffeescript'

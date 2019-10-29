@@ -13,12 +13,12 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "Yudai Oriver K"
+title: Yudai Oriver K
 email: 
 description: >- # this means to ignore newlines until "baseurl:"
-  B.Agr. / Ruby / Java / 転職活動中＠日本
+  B.Agr. / Ruby / Java / 転職活動中
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://oriverk.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: https://oriverk.github.io # the base hostname & protocol for your site, e.g. http://example.com
 twitter: not_you_die 
 github: oriverk
 wantedly: 40069986
@@ -26,6 +26,8 @@ linkedin: yudai-k
 lapras: CF9OBXY
 qiita: OriverK
 image: cycle-taiwan.jpg
+# change coloer of tab for android and opera on > android5 lolipop
+theme-color: #2E2E2E
 
 # Google Analytics
 google_analytics: UA-131793403-3
@@ -40,6 +42,7 @@ plugins:
   - jekyll-paginate # added
   - jekyll-remote-theme # added
   - github-pages # added
+  - jekyll-coffeescript
 
 author:
   name: 'OriverK'
