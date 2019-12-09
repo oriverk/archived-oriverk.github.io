@@ -1,0 +1,220 @@
+$tab: 800px; 
+@mixin tab {
+  @media (min-width: ($tab)) {
+    @content;
+  }
+}
+$tab: 960px; 
+@mixin pc {
+  @media (min-width: ($tab)) {
+    @content;
+  }
+}
+
+body{
+  background-color:rgb(0, 162, 255);
+  background-image:url("http://127.0.0.1:51138/taiwan.jpg");
+  background-size:cover;
+  background-position: right;
+  background-attachment:fixed;
+  color:white;
+  // desable scroll bar
+  -ms-overflow-style: none; // IE
+  overflow: -moz-scrollbars-none; // Firefox
+  &::-webkit-scrollbar { // Chrome
+    display: none;
+  }
+}
+
+.wrap{
+  background-color:rgba(0, 0, 0, 0.767);
+  width:95%;
+  margin:1% auto 5%;
+  padding:10px;
+  border-radius:0.3rem;
+  @include tab{
+    width:760px;
+  }
+}
+
+a{
+  color:orange;
+  &:hover{
+    color:orangered;
+  }
+}
+
+hr{
+  margin:3% auto;
+  border:solid 1px rgb(255, 189, 66);
+  background-color:rgb(255, 189, 66);
+}
+
+li.nav-item{
+  width:15%;
+  &:hover{
+    border:solid 1px orange;
+    border-radius: 0.3rem;
+  }
+  @include tab{
+    width:88px;
+  }
+}
+
+a.nav-link{
+  color:orange;
+  padding:8px;
+  text-align:center;
+}
+
+span.tab-svg{
+  display:block;
+  text-align:center;
+  svg{
+    fill:orange;
+    width:80%;
+    @include tab{
+      width:70%;
+    }
+  }
+}
+
+.nav-pills .nav-link.active{
+  background-color: orange;
+  color:black;
+  font-weight:bold;
+  svg{
+    fill:black;
+  }
+}
+
+#tab-text{
+  display:none;
+  @include tab{
+    display:inline-block;
+    font-size:0.8rem;
+  }
+}
+
+// content
+#pills-tabContent{
+  margin:0 5%;
+}
+
+// top
+.top-content{
+  text-align:center;
+  h1{
+    margin-bottom:1rem;
+  }
+  h2{
+    margin-bottom:0.8px;
+  }
+  #jobchange{
+    font-weight: bold;
+    margin-top:2rem;
+  }
+}
+
+.qr img{
+  width:30%;
+  margin: 10% auto;
+  @include tab{
+    width:20%;
+  }
+}
+
+.svg-links{
+  margin-bottom:10%;
+  .svg-link{
+    display:inline;
+    margin:0 5px;
+    svg{
+      width:15%;
+      fill:white;
+      @include tab{
+        width:10%;
+      }
+    }
+  }
+}
+
+//experience
+.experience-content{
+  p{
+    margin-bottom:1rem;
+  }
+  .content-card{
+    ul{
+      list-style: none;
+    }
+    svg{
+      width:1rem;
+      fill:orange;
+      margin-right:0.5rem;
+    }
+  }
+}
+
+//skill
+.skill-content{
+  .flex{
+    @include tab{
+      display:flex;
+      flex-wrap:wrap;
+    }
+    .content-card{
+      text-align: center;
+      width:90%;
+      margin:0 auto;
+      padding:1rem;
+      padding-bottom:0;
+      border-bottom:solid 2px rgb(255, 189, 66);
+      @include tab{
+        width:45%;
+      }
+    }
+    #odd{
+      border-bottom:0;
+    }
+  }
+}
+
+.skill-content{
+  .card-img{
+    text-align:center;
+    svg{
+      width:40%;
+    }
+  }
+  #java-svg svg{
+    width:28%
+  }
+  #html5-svg svg{
+    width:28%;
+  }
+}
+
+//works.html
+.works-content{
+  img{
+    width:100%;
+  }
+  ul{
+    list-style: none;
+  }
+}
+
+// posts
+.posts-content .content-card{
+  border:solid 1px rgb(255, 189, 66);
+  border-radius: 0.3rem;
+  margin-bottom:1rem;
+  a{
+    display:block;
+    padding:1rem;
+    p{
+      margin-bottom:0;
+    }
+  }
+}

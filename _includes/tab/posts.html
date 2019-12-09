@@ -1,0 +1,11 @@
+<div class="posts-content">
+  {% for post in site.posts %}
+  <div class="content-card">
+    <a href="{{ post.url }}">
+      <h3>{{ post.title }}</h3>
+      <p>at: &nbsp;{{ post.date | date: ""%Y.%m.%d" }}</p>
+      <p>category:{% for category in site.categories %}&nbsp;{{ category[0] }},{% endfor %}</p>
+    </a>
+  </div>
+  {% endfor %}
+</div>

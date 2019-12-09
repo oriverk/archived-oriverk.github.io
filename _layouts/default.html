@@ -1,0 +1,38 @@
+{% include head.html %}
+
+<body>
+  <div class="wrap">
+    <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="pills-1-tab" data-toggle="pill" href="#pills-1" role="tab"
+          aria-controls="pills-1" aria-selected="true"><span class="tab-svg">{% include svg/top.svg %}</span><span id="tab-text">Top</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-2-tab" data-toggle="pill" href="#pills-2" role="tab"
+          aria-controls="pills-2" aria-selected="false"><span class="tab-svg">{% include svg/cv.svg %}</span><span id="tab-text">Experience</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-3-tab" data-toggle="pill" href="#pills-3" role="tab"
+          aria-controls="pills-3" aria-selected="false"><span class="tab-svg">{% include svg/floppy.svg %}</span><span id="tab-text">Skill</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-4-tab" data-toggle="pill" href="#pills-4" role="tab"
+          aria-controls="pills-4" aria-selected="false"><span class="tab-svg">{% include svg/fireworks.svg %}</span><span id="tab-text">Works</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-5-tab" data-toggle="pill" href="#pills-5" role="tab"
+          aria-controls="pills-5" aria-selected="false"><span class="tab-svg">{% include svg/pen.svg %}</span><span id="tab-text">Posts</span></a>
+      </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">{% include tab/top.html %}</div>
+      <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">{% include tab/experience.html %}</div>
+      <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab">{% include tab/skill.html %}</div>
+      <div class="tab-pane fade" id="pills-4" role="tabpanel" aria-labelledby="pills-4-tab">{% include tab/works.html %}</div>
+      <div class="tab-pane fade" id="pills-5" role="tabpanel" aria-labelledby="pills-5-tab">{% include tab/posts.html %}</div>
+    </div>
+  </div>
+  {% include bootstrap.html %}
+  {% include google-analytics.html %}
+</body>
+  
