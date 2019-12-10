@@ -1,7 +1,8 @@
 <div class="posts-content">
+  Currently posts links are under construction ...
   {% for post in site.posts %}
   <div class="content-card">
-    <a href="{{ post.url }}">
+    <a href="#">
       <h3>{{ post.title }}</h3>
       <p>at: &nbsp;{{ post.date | date: ""%Y.%m.%d" }}</p>
       <p>category:{% for category in site.categories %}&nbsp;{{ category[0] }},{% endfor %}</p>

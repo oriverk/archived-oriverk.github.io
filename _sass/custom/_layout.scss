@@ -130,6 +130,9 @@ span.tab-svg{
   .svg-link{
     display:inline;
     margin:0 5px;
+    a.icon:hover{
+      color:transparent;
+    }
     svg{
       width:15%;
       fill:white;
@@ -138,6 +141,23 @@ span.tab-svg{
       }
     }
   }
+}
+
+#subscribe svg:hover{
+  fill:#ff8c00;
+}
+#github svg:hover{
+  fill:#24292e;
+  background-color: rgb(255, 255, 255);
+}
+#qiita svg:hover{
+  fill:#55c500;
+}
+#wantedly svg:hover{
+  fill:#00A4BB;
+}
+#linkedin svg:hover{
+  fill:#0077b5;
 }
 
 //experience
