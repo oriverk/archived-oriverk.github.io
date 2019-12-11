@@ -12,8 +12,10 @@ $tab: 960px;
 }
 
 body{
-  background:linear-gradient(143deg, rgb(123, 208, 231) 0%, #001E90 96%) fixed;
+  background:linear-gradient(90deg, rgb(123, 208, 231) 0%, #001E90 96%) fixed;
+  background-size: cover;
   background-attachment:fixed;
+  background-size: cover;
   color:rgb(236, 236, 236);
   // desable scroll bar
   -ms-overflow-style: none; // IE
