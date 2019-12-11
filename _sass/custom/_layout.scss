@@ -12,12 +12,9 @@ $tab: 960px;
 }
 
 body{
-  background-color:rgb(0, 162, 255);
-  background-image:url("../taiwan.jpg");
-  background-size:cover;
-  background-position: right;
+  background:linear-gradient(143deg, rgb(123, 208, 231) 0%, #001E90 96%) fixed;
   background-attachment:fixed;
-  color:white;
+  color:rgb(236, 236, 236);
   // desable scroll bar
   -ms-overflow-style: none; // IE
   overflow: -moz-scrollbars-none; // Firefox
@@ -27,11 +24,11 @@ body{
 }
 
 .wrap{
-  background-color:rgba(0, 0, 0, 0.767);
+  background-color:rgba(0, 0, 0, .767);
   width:95%;
   margin:1% auto 5%;
   padding:10px;
-  border-radius:0.3rem;
+  border-radius:.3rem;
   @include tab{
     width:760px;
   }
@@ -40,21 +37,21 @@ body{
 a{
   color:orange;
   &:hover{
-    color:orangered;
+    color:#fe2401;
+    text-decoration: none;
   }
 }
 
 hr{
   margin:3% auto;
-  border:solid 1px rgb(255, 189, 66);
-  background-color:rgb(255, 189, 66);
+  
 }
 
 li.nav-item{
   width:15%;
   &:hover{
     border:solid 1px orange;
-    border-radius: 0.3rem;
+    border-radius: .3rem;
   }
   @include tab{
     width:88px;
@@ -62,7 +59,7 @@ li.nav-item{
 }
 
 a.nav-link{
-  color:orange;
+  color:rgb(236, 236, 236);
   padding:8px;
   text-align:center;
 }
@@ -71,7 +68,7 @@ span.tab-svg{
   display:block;
   text-align:center;
   svg{
-    fill:orange;
+    fill:gray;
     width:80%;
     @include tab{
       width:70%;
@@ -92,7 +89,7 @@ span.tab-svg{
   display:none;
   @include tab{
     display:inline-block;
-    font-size:0.8rem;
+    font-size:.8rem;
   }
 }
 
@@ -108,7 +105,7 @@ span.tab-svg{
     margin-bottom:1rem;
   }
   h2{
-    margin-bottom:0.8px;
+    margin-bottom:.8px;
   }
   #jobchange{
     font-weight: bold;
@@ -135,7 +132,7 @@ span.tab-svg{
     }
     svg{
       width:15%;
-      fill:white;
+      fill:rgb(236, 236, 236);
       @include tab{
         width:10%;
       }
@@ -148,7 +145,7 @@ span.tab-svg{
 }
 #github svg:hover{
   fill:#24292e;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(236, 236, 236);
 }
 #qiita svg:hover{
   fill:#55c500;
@@ -172,7 +169,7 @@ span.tab-svg{
     svg{
       width:1rem;
       fill:orange;
-      margin-right:0.5rem;
+      margin-right:.5rem;
     }
   }
 }
@@ -231,8 +228,8 @@ span.tab-svg{
 
 // posts
 .posts-content .content-card{
-  border:solid 1px rgb(255, 189, 66);
-  border-radius: 0.3rem;
+  border:solid .5px grey;
+  border-radius: .3rem;
   margin-bottom:1rem;
   a{
     display:block;

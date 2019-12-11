@@ -1,16 +1,16 @@
 .tags-list {
   a {
-    margin-right: 0.5em;
+    margin-right: .5em;
     white-space: nowrap;
-    opacity: 0.75;
+    opacity: .75;
 
     .tag-count {
-      color: rgba(255, 255, 255, 0.8);
-      margin-left: 0.25em;
+      color: rgba(255, 255, 255, .8);
+      margin-left: .25em;
       border-radius: 1000px;
-      font-size: 0.75em;
-      padding-left: 0.6em;
-      padding-right: 0.6em;
+      font-size: .75em;
+      padding-left: .6em;
+      padding-right: .6em;
     }
 
     // No underline because it looks weird with badge
@@ -32,6 +32,6 @@
 
   &:target {
     display: block;
-    animation: posts-for-tag-fade-in 0.6s ease-in-out;
+    animation: posts-for-tag-fade-in .6s ease-in-out;
   }
 }
