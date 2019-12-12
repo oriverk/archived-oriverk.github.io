@@ -3,7 +3,6 @@
     margin-right: .5em;
     white-space: nowrap;
     opacity: .75;
-
     .tag-count {
       color: rgba(255, 255, 255, .8);
       margin-left: .25em;
@@ -11,12 +10,6 @@
       font-size: .75em;
       padding-left: .6em;
       padding-right: .6em;
-    }
-
-    // No underline because it looks weird with badge
-    &:hover {
-      text-decoration: none;
-      opacity: 1;
     }
   }
 }
@@ -26,10 +19,8 @@
   to { opacity: 1; }
 }
 
-// Display only if targeted
 .posts-for-tag {
   display: none;
-
   &:target {
     display: block;
     animation: posts-for-tag-fade-in .6s ease-in-out;

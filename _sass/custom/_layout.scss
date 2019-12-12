@@ -1,35 +1,35 @@
-$tab: 800px; 
+$tab:800px; 
 @mixin tab {
-  @media (min-width: ($tab)) {
+  @media (min-width:($tab)) {
     @content;
   }
 }
-$tab: 960px; 
+$tab:960px; 
 @mixin pc {
-  @media (min-width: ($tab)) {
+  @media (min-width:($tab)) {
     @content;
   }
 }
 
 body{
   background:linear-gradient(90deg, rgb(123, 208, 231) 0%, #001E90 96%) fixed;
-  background-size: cover;
+  background-size:cover;
   background-attachment:fixed;
-  background-size: cover;
+  background-size:cover;
   color:rgb(236, 236, 236);
   // desable scroll bar
-  -ms-overflow-style: none; // IE
-  overflow: -moz-scrollbars-none; // Firefox
+  -ms-overflow-style:none; // IE
+  overflow:-moz-scrollbars-none; // Firefox
   &::-webkit-scrollbar { // Chrome
-    display: none;
+    display:none;
   }
 }
 
 .wrap{
   background-color:rgba(0, 0, 0, .767);
   width:95%;
-  margin:1% auto 5%;
-  padding:10px;
+  margin:2% auto 5%;
+  padding: 0 10px 10px 10px;
   border-radius:.3rem;
   @include tab{
     width:760px;
@@ -38,22 +38,30 @@ body{
 
 a{
   color:orange;
+  text-decoration:none;
   &:hover{
     color:#fe2401;
-    text-decoration: none;
   }
 }
 
 hr{
   margin:3% auto;
-  
+  border-width:0;
+  height:3px;
+  background-color:#ffbd42;
 }
+
+ul{
+  list-style: none;
+  padding-left:1rem;
+}
+
 
 li.nav-item{
   width:15%;
   &:hover{
     border:solid 1px orange;
-    border-radius: .3rem;
+    border-radius:.3rem;
   }
   @include tab{
     width:88px;
@@ -79,7 +87,7 @@ span.tab-svg{
 }
 
 .nav-pills .nav-link.active{
-  background-color: orange;
+  background-color:orange;
   color:black;
   font-weight:bold;
   svg{
@@ -95,9 +103,55 @@ span.tab-svg{
   }
 }
 
+//bootstrap 
+.justify-content-center {
+  -ms-flex-pack:center;
+  justify-content:center;
+}
+
+.fade {
+  transition:opacity .03s linear;
+}
+
+.fade:not(.show) {
+  opacity:0;
+}
+
+.nav {
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-wrap:wrap;
+  flex-wrap:wrap;
+  padding-left:0;
+}
+
+.nav-link {
+  display:block;
+}
+
+.nav-pills .nav-link {
+  border-radius:.3rem;
+}
+
+ .tab-content > .tab-pane {
+  display:none;
+}
+
+.tab-content > .active {
+  display:block;
+}
+
 // content
 #pills-tabContent{
   margin:0 5%;
+}
+
+.content-card span{
+  svg{
+    width:1rem;
+    fill:orange;
+    margin-right:.5rem;
+  }
 }
 
 // top
@@ -110,22 +164,22 @@ span.tab-svg{
     margin-bottom:.8px;
   }
   #jobchange{
-    font-weight: bold;
+    font-weight:bold;
     margin-top:2rem;
   }
 }
 
 .qr img{
   width:30%;
-  margin: 10% auto;
+  margin:8% auto;
   @include tab{
     width:25%;
-    margin: 8% auto;
+    margin:6% auto;
   }
 }
 
 .svg-links{
-  margin-bottom:10%;
+  margin-bottom:2rem;
   .svg-link{
     display:inline;
     margin:0 5px;
@@ -133,10 +187,16 @@ span.tab-svg{
       color:transparent;
     }
     svg{
-      width:15%;
+      width:13%;
       fill:rgb(236, 236, 236);
       @include tab{
         width:10%;
+      }
+    }
+    #wantedly, #linkedin svg{
+      width:15%;
+      @include tab{
+        width:12%;
       }
     }
   }
@@ -147,7 +207,7 @@ span.tab-svg{
 }
 #github svg:hover{
   fill:#24292e;
-  background-color: rgb(236, 236, 236);
+  background-color:rgb(236, 236, 236);
 }
 #qiita svg:hover{
   fill:#55c500;
@@ -159,23 +219,6 @@ span.tab-svg{
   fill:#0077b5;
 }
 
-//experience
-.experience-content{
-  p{
-    margin-bottom:1rem;
-  }
-  .content-card{
-    ul{
-      list-style: none;
-    }
-    svg{
-      width:1rem;
-      fill:orange;
-      margin-right:.5rem;
-    }
-  }
-}
-
 //skill
 .skill-content{
   .flex{
@@ -184,14 +227,14 @@ span.tab-svg{
       flex-wrap:wrap;
     }
     .content-card{
-      text-align: center;
+      text-align:center;
       width:90%;
       margin:0 auto;
       padding:1rem;
       padding-bottom:0;
       border-bottom:solid 2px rgb(255, 189, 66);
       @include tab{
-        width:45%;
+        width:40%;
       }
     }
     #odd{
@@ -207,8 +250,11 @@ span.tab-svg{
       width:40%;
     }
   }
+  #ruby-svg svg{
+    width:35%;
+  }
   #java-svg svg{
-    width:28%
+    width:28%;
   }
   #html5-svg svg{
     width:28%;
@@ -223,21 +269,25 @@ span.tab-svg{
   img{
     width:100%;
   }
-  ul{
-    list-style: none;
-  }
 }
 
 // posts
 .posts-content .content-card{
   border:solid .5px grey;
-  border-radius: .3rem;
+  border-radius:.3rem;
   margin-bottom:1rem;
+  &:hover{
+    border:solid .5px #fe2401;
+  }
+  h4{
+    display:inline-block;
+    margin:.5rem auto;
+  }
   a{
     display:block;
-    padding:1rem;
+    padding:.5rem;
     p{
-      margin-bottom:0;
+      margin:.5rem auto 0;
     }
   }
 }
