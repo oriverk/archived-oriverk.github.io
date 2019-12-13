@@ -86,7 +86,7 @@ span.tab-svg{
   }
 }
 
-.nav-pills .nav-link.active{
+.nav-pills a.nav-link.active {
   background-color:orange;
   color:black;
   font-weight:bold;
@@ -170,11 +170,11 @@ span.tab-svg{
 }
 
 .qr img{
-  width:30%;
-  margin:8% auto;
+  width:34%;
+  margin:3% auto;
   @include tab{
-    width:25%;
-    margin:6% auto;
+    width:27%;
+    margin:3% auto;
   }
 }
 
