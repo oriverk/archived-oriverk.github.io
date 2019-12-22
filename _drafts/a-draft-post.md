@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A Trip
-categories: [blog, travel]
+categories: blog
 tags: [hot, summer]
 ---
 
