@@ -17,7 +17,7 @@ postsページ作成により、jekyll理解した気がするんだ
     <header>
       <nav>
         <h1>fffff</h1>
-        <div class="title">Github</div>
+        <p class="title">Github</p> 
       </nav>
     </header>
     <article>
