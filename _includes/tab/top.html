@@ -1,14 +1,8 @@
-<div class="top-content">
-  <h1 class="name">{{ site.title }}</h1>
-  <div class="description">
-    <h2>{{ site.description }}</h2>
-    <h2>{{ site.sub-description }}</h2>
-    <h2 id="jobchange">転職活動中</h2>
-  </div>
-  <div class="qr">
-    <img src="assets/images/githubpagesQR.jpg" alt="QR code fot this GithubPages">
-  </div>
-  <div class="svg-links">
-    {% include top-svg-links.html %}
-  </div>
+<h1>{{ site.title }}</h1>
+<h2>{{ site.description }}</p>
+<h2>{{ site.sub-description }}</h2>
+<p class=jobchange>転職活動中</p>
+<img class=qr src="/assets/images/githubpagesQR.jpg" alt="QR code fot this GithubPages">
+<div class="svg-links">
+  {% include top-svg-links.html %}
 </div>

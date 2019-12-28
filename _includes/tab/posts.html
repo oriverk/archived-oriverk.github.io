@@ -1,12 +1,9 @@
-<div class="posts-content">
-  <p>Currently under construction ...</p>
-  {% for post in site.posts %}
-  <div class="content-card">
-    <a href="{{ post.url }}">
-      <h4>{{ post.title }}</h4>
-      <p>at: &nbsp;{{ post.date | date: ""%Y.%m.%d" }}</p>
-      <p>category:{% for category in site.categories %}&nbsp;{{ category[0] }},{% endfor %}</p>
-    </a>
-  </div>
-  {% endfor %}
-</div>
+{% for post in site.posts %}
+<section class="card">
+  <a href="{{ post.url }}">
+    <h4>{{ post.title }}</h4>
+    <p>at: &nbsp;{{ post.date | date: ""%Y.%m.%d" }}</p>
+    <p>category:{% for category in site.categories %}&nbsp;{{ category[0] }},{% endfor %}</p>
+  </a>
+</section>
+{% endfor %}
