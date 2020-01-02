@@ -1,13 +1,32 @@
 ---
-layout: blog
+layout: default
 ---
-
-{% for post in site.posts %}
-<section class=card>
-  <a href="{{ post.url }}">
-    <h4>{{ post.title }}</h4>
-    <p>at: &nbsp;{{ post.date | date: "%Y.%m.%d" }}</p>
-    <p>category:{% for category in site.categories %}&nbsp;{{ category[0] }},{% endfor %}</p>
-  </a>
-</section>
-{% endfor %}
+<header>
+  <ul class=menu>
+    <li>
+      <a href="/"><span class=tab-svg>{% include svg/top.svg %}</span></a>
+    </li>
+    <li>
+      <a href="/posts/" class=active><span class=tab-svg>{% include svg/pen.svg %}</span></a>
+    </li>
+    <li>
+      <a href="/"><span class=tab-svg>{% include svg/tag.svg %}</span></a>
+    </li>
+ 
+</header>
+<article>
+  <section class='posts content active' id=posts>
+    {% if page.url  == "{{ site.url }}/posts/" %}
+    {% for post in site.posts %}
+    <div class=card>
+      <a href="{{ post.url }}">
+        <h2>{{ post.title }}</h2>
+        <p>Posted on&nbsp;{{ post.date | date: "%Y.%m.%d" }}</p>
+      </a>
+    </div>
+    {% endfor %}
+    {% else %}
+    jjjjjjj
+    {% endif %}
+  </section>
+</article>

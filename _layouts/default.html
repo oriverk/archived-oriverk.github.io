@@ -1,33 +1,8 @@
 {% include head.html %}
 <body>
   <div class=wrap>
-    <header>
-      <ul class=menu>
-        <li>
-          <a class=active data-id=top><span class=tab-svg>{% include svg/top.svg %}</span><span class=tab-text>Top</span></a>
-        </li>
-        <li>
-          <a data-id=experience><span class=tab-svg>{% include svg/cv.svg %}</span><span class=tab-text>Experience</span></a>
-        </li>
-        <li>
-          <a data-id=skill><span class=tab-svg>{% include svg/floppy.svg %}</span><span class=tab-text>Skill</span></a>
-        </li>
-        <li>
-          <a data-id=works><span class=tab-svg>{% include svg/fireworks.svg %}</span><span class=tab-text>Works</span></a>
-        </li>
-        <div>
-          <a href="/posts/"><span class=tab-svg>{% include svg/pen.svg %}</span><span class=tab-text>Posts</span></a>
-        </div>
-    </header>
-    <article>
-      <section class='top content active' id=top>{% include tab/top.html %}</section>
-      <section class='experience content' id=experience>{% include tab/experience.html %}</section>
-      <section class='skill content' id=skill>{% include tab/skill.html %}</section>
-      <section class='works content' id=works>{% include tab/works.html %}</section>
-    </article>
+    {{ content }}
   </div>
-  {% include menu-tab-js.html %}
-{% include google-analytics.html %}
+  {% include google-analytics.html %}
 </body>
-</html>
   
