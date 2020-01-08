@@ -1,8 +1,9 @@
 code {
+  color: #fff;
   padding: .25em .5em;
-  font-size: 85%;
-  background-color: #f9f9f9;
-  border-radius: 3px;
+  font-size: 1rem;
+  background-color: #49483e;
+  border-radius: .25rem;
 }
 
 pre {
@@ -13,22 +14,25 @@ pre {
 pre code {
   padding: 0;
   font-size: 100%;
-  color: black;
   background-color: transparent;
 }
 
 // Pygments/Rouge via Jekyll
-.highlight {
-  padding: 1rem;
+div.highlight {
   margin-bottom: 1rem;
   font-size: .8rem;
+  font-weight:bold;
   line-height: 1.4;
-  background-color: #f9f9f9;
   border-radius: .25rem;
+  color: #fff;
+  background-color: #49483e;
 
-  pre {
+  pre.highlight {
+    padding:1rem;
     margin-bottom: 0;
     overflow-x: auto;
+    border:1px solid rgb(112, 112, 112);
+    border-radius: .1rem;
   }
 
   .lineno {

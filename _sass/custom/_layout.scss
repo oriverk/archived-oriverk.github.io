@@ -4,56 +4,58 @@ $tab:800px;
     @content;
   }
 }
-$tab:960px; 
+$pc:960px; 
 @mixin pc {
-  @media (min-width:($tab)) {
+  @media (min-width:($pc)) {
+    @content;
+  }
+}
+$sm:481px;
+@mixin sm {
+  @media (min-width:($sm)){
     @content;
   }
 }
 
 body{
-  background:linear-gradient(90deg, rgb(123, 208, 231) 0%, #001E90 96%) fixed;
-  background-size:cover;
-  background-attachment:fixed;
-  background-size:cover;
-  color:rgb(236, 236, 236);
+  min-height: 100vh;
+  background-color: rgb(61, 119, 238);
+  background:linear-gradient(90deg, rgb(123, 208, 231) 0%, rgb(0, 30, 144) 96%) fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
   // desable scroll bar
-  -ms-overflow-style:none; // IE
+  -ms-overflow-style: none; // IE
   overflow:-moz-scrollbars-none; // Firefox
   &::-webkit-scrollbar { // Chrome
-    display:none;
+    display: none;
   }
+  @include tab{
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/*スクロールバー全体*/
+::-webkit-scrollbar {
+  width: .5rem;
+}
+
+/*スクロールバーの動く部分*/
+::-webkit-scrollbar-thumb {
+  background-color: rgb(128, 128, 128);
+  border-radius: .3rem;
 }
 
 .wrap{
-  background-color:rgba(0, 0, 0, .767);
-  width:95%;
-  margin:2% auto 5%;
-  padding: 0 10px 10px 10px;
-  border-radius:.3rem;
+  background-color: rgba(0, 0, 0, .767);
+  width: 95%;
+  margin: 2% auto 5%;
+  padding: 0 .7rem .7rem;
+  border-radius: .3rem;
   @include tab{
-    width:760px;
+    width: 760px;
   }
-}
-
-a{
-  color:orange;
-  text-decoration:none;
-  &:hover{
-    color:#fe2401;
-  }
-}
-
-hr{
-  margin:3% auto;
-  border-width:0;
-  height:3px;
-  background-color:#ffbd42;
-}
-
-ul{
-  list-style: none;
-  padding-left:1rem;
 }
 
 .menu {
@@ -61,8 +63,8 @@ ul{
   padding: 0;
   margin: 0;
   display: flex;
-  -ms-flex-pack:center;
-  justify-content:center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .menu li, .menu div{
@@ -70,57 +72,58 @@ ul{
   text-align: center;
   &:hover{
     svg{
-      fill:orange;
+      fill: rgb(255, 165, 0);
       transition: .1s;
     }
   }
   @include tab{
-    width:88px;
+    width: 88px;
   }
 }
 
 .menu a {
   display: inline-block;
   text-align: center;
-  padding: 8px 0;
+  padding: .5rem 0;
   color: #fff;
+  font-weight: bold;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: .25rem;
 }
 
 .tab-svg{
-  display:block;
-  text-align:center;
+  display: block;
+  text-align: center;
   svg{
-    fill:gray;
-    width:80%;
+    fill: rgb(128, 128, 128);
+    width: 80%;
     @include tab{
-      width:70%;
+      width: 70%;
     }
   }
 }
 
 .menu a.active{
-  background-color:orange;
-  color: black;
+  background-color: rgb(255, 165, 0);
+  color: #000;
   font-weight: bold;
   svg{
-    fill:black;
+    fill: #000;
   }
 }
 
 .tab-text{
-  display:none;
+  display: none;
   @include tab{
-    display:inline-block;
-    font-size:.8rem;
+    display: inline-block;
+    font-size: .8rem;
   }
 }
 
 .content.active {
   color: #fff;
-  min-height: 150px;
-  padding: 12px;
+  min-height: 9.4rem;
+  padding: .75rem;
   display: block;
 }
 
@@ -128,148 +131,139 @@ ul{
   display: none;
 }
 
-.card svg, #cv-svg svg{
-    width:1rem;
-    fill:orange;
-    margin-right:.5rem;
+.card svg, #cv-svg svg, .blog-list svg, .post svg{
+    width: 1rem;
+    fill: rgb(255, 165, 0);
+    margin-right: .5rem;
 }
 
 // top
 .top{
-  text-align:center;
-  h1{
-    font-size:2rem;
-    margin-bottom:1rem;
+  text-align: center;
+  h1, h2{
+    margin: 1rem auto;
   }
-  h2{
-    margin-bottom:.8px;
-  }
-  .jobchange{
-    font-size:1rem;
-    font-weight:bold;
-    margin-top:2rem;
+  p{
+    margin-top: 2rem;
+    font-weight: bold;
   }
 }
 
-.top img.qr{
-  width:34%;
-  margin:3% auto;
+.top .qr{
+  width: 34%;
+  margin: 3% auto;
   @include tab{
-    width:22%;
-    margin:3% auto;
+    width: 22%;
+    margin: 3% auto;
   }
 }
 
 .svg-links{
-  margin-bottom:2rem;
+  margin-bottom: 2rem;
   .svg-link{
-    display:inline;
-    margin:0 5px;
+    display: inline;
+    margin: 0 .3rem;
     a.icon:hover{
-      color:transparent;
+      color: transparent;
     }
     svg{
-      width:13%;
-      fill:rgb(236, 236, 236);
+      width: 13%;
+      fill: rgb(236, 236, 236);
       @include tab{
-        width:10%;
+        width: 10%;
       }
     }
     #wantedly, #linkedin svg{
-      width:15%;
+      width: 15%;
       @include tab{
-        width:12%;
+        width: 12%;
       }
     }
   }
 }
 
-#subscribe svg:hover{
-  fill:#ff8c00;
-}
-#github svg:hover{
-  fill:#24292e;
+#subscribe svg:hover{ fill: #ff8c00; }
+#github svg:hover{ 
+  fill: #24292e;
   background-color:rgb(236, 236, 236);
 }
-#qiita svg:hover{
-  fill:#55c500;
-}
-#wantedly svg:hover{
-  fill:#00A4BB;
-}
-#linkedin svg:hover{
-  fill:#0077b5;
-}
+#qiita svg:hover{ fill: #55c500; }
+#wantedly svg:hover{ fill: #00A4BB; }
+#linkedin svg:hover{ fill: #0077b5; }
 
 //skill
 .skill{
   .flex{
-    @include tab{
-      display:flex;
-      flex-wrap:wrap;
-    }
+    display: flex;
+    flex-wrap: wrap;
     .card{
-      text-align:center;
-      width:90%;
-      margin:0 auto;
-      padding:1rem;
-      padding-bottom:0;
-      border-bottom:solid 2px rgb(255, 189, 66);
-      @include tab{
+      text-align: center;
+      width: 90%;
+      margin: 0 auto;
+      padding: 1rem;
+      padding-bottom: 0;
+      border-bottom: solid 2px rgb(255, 189, 66);
+      @include sm{
         width:40%;
       }
     }
     #odd{
-      border-bottom:0;
+      border-bottom: 0;
     }
   }
 }
 
 .skill{
   .svg{
-    text-align:center;
+    text-align: center;
     svg{
-      width:40%;
+      width: 40%;
     }
   }
-  #ruby svg{
-    width:35%;
-  }
-  #java svg{
-    width:28%;
-  }
-  #html5 svg{
-    width:28%;
-  }
+  #java svg{ width: 20%; }
+  #ruby svg{ width: 30%; }
+  #vb svg{ width: 40%; }
+  #html5 svg{ width: 28%; }
+  #cpp svg{ width: 30%; }
 }
 
 //works.html
 .works{
   picture{
-    width:100%;
+    width: 100%;
   }
   img{
-    width:100%;
+    width: 100%;
   }
 }
 
-// posts
-.posts .card{
-  border:solid .5px grey;
-  border-radius:.3rem;
-  margin-bottom:1rem;
-  &:hover{
-    border:solid .5px #fe2401;
+// baseurl/blog.html or /blog/~~
+.post.content.active{
+  h1, h2{
+    font-weight: normal;
   }
-  h4{
-    display:inline-block;
-    margin:.5rem auto;
+  h2 {
+    text-align: left;
+    border-left: 0.32rem solid rgb(255, 165, 0);
+    margin: 2rem 0 .5rem 0;
+    padding: .5rem 0 .5rem .5rem;
   }
-  a{
-    display:block;
-    padding:.5rem;
-    p{
-      margin:.5rem auto 0;
-    }
+  svg{
+    fill: rgb(135, 206, 235);
+  }
+}
+
+// blog-list root-url/blog.html
+ul.blog-list{
+  padding-left: 0;
+  list-style: none;
+  h1{
+    font-size: 1.75rem;
+  }
+  .tags, .datetime{
+    font-size: .8rem;
+  }
+  hr:last-child{
+    display: none;
   }
 }

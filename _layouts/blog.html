@@ -5,25 +5,18 @@
     <header>
       <ul class=menu>
         <li>
-          <a href=/ data-id=top><span class=tab-svg>{% include svg/top.svg %}</span></a>
+          <a href="/"><span class=tab-svg>{% include svg/top.svg %}</span></a>
         </li>
         <li>
-          <a href=/ data-id=experience><span class=tab-svg>{% include svg/cv.svg %}</span></a>
+          <a href="/blog" class=active><span class=tab-svg>{% include svg/pen.svg %}</span></a>
         </li>
-        <li>
-          <a href=/ data-id=skill><span class=tab-svg>{% include svg/floppy.svg %}</span></a>
-        </li>
-        <li>
-          <a href=/ data-id=works><span class=tab-svg>{% include svg/fireworks.svg %}</span></a>
-        </li>
-        <li>
-          <a href=/ class=active data-id=posts><span class=tab-svg>{% include svg/pen.svg %}</span></a>
-        </li>
+        <!-- <li>
+          <a href="/blog"><span class=tab-svg>{% include svg/tag.svg %}</span></a>
+        </li> -->
       </ul>
     </header>
     <article>
-      <section class=posts>
-        ↓ is from "\/posts.html"
+      <section class='post content active'>
         {{ content }}
       </section>
     </article>

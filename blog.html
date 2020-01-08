@@ -1,0 +1,15 @@
+---
+layout: blog
+---
+<ul class='blog-list'>
+  {% for post in site.posts %}
+  <li>
+    <h1><a href="{{ post.url | prepend: site.baseurl }}" class='post-link'>{{ post.title }}</a></h1>
+    <span class=tags>
+      {% include svg/tag.svg %}{% for tag in site.tags %}{{ tag[0] }},&nbsp;{% endfor %}
+    </span>
+    <span class=datetime>Posted on&nbsp;{{ post.date | date: "%Y.%m.%d" }}</span>
+  </li>
+  <hr>
+  {% endfor %}
+</ul>
