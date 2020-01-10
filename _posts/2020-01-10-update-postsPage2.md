@@ -1,8 +1,8 @@
 ---
 layout: blog
 title: Postページを中心に改修した（N度目
-categories: blog
-tags: [update,]
+categories: [blog]
+tags: [update]
 permalink: blog/:title
 ---
 
