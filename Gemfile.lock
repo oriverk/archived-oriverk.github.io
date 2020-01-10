@@ -9,6 +9,8 @@ GEM
       zeitwerk (~> 2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    autoprefixer-rails (9.7.3)
+      execjs
     backports (3.15.0)
     coffee-script (2.4.1)
       coffee-script-source
@@ -104,6 +106,8 @@ GEM
       jekyll (>= 3.3, < 5.0)
       sinatra (~> 1.4)
       sinatra-contrib (~> 1.4)
+    jekyll-autoprefixer (1.0.2)
+      autoprefixer-rails (~> 9.3)
     jekyll-avatar (0.7.0)
       jekyll (>= 3.0, < 5.0)
     jekyll-coffeescript (1.1.1)
@@ -269,6 +273,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-admin
+  jekyll-autoprefixer
   jekyll-coffeescript
   jekyll-feed (~> 0.6)
   rouge

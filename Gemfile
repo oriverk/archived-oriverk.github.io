@@ -7,6 +7,8 @@ source 'https://rubygems.org'
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 
 gem 'rouge'
+gem 'jekyll-autoprefixer'
+
 
 gem 'github-pages', group: :jekyll_plugins
 

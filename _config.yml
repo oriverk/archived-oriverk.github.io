@@ -26,6 +26,12 @@ plugins:
   - jekyll-paginate
   - github-pages
   - jekyll-coffeescript
+  - jekyll-autoprefixer
+
+autoprefixer:
+  only_production: true
+  browsers:
+  - last 2 versions
 
 author:
   name: 'OriverK'
