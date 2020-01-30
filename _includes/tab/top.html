@@ -1,7 +1,36 @@
 <h1>{{ site.title }}</h1>
-<h2>{{ site.description }}<br>{{ site.sub-description }}</h2>
+<h2>{{ site.description }}</h2>
+<h2>{{ site.sub-description }}</h2>
 <p>転職活動中</p>
-<img class=qr src="/assets/images/githubpagesQR.jpg" alt="QR code fot this GithubPages">
 <div class="svg-links">
-  {% include top-svg-links.html %}
+  <div class="svg-link">
+    <a id="github" class="icon" title="Github" aria-label="Github" target="_blank" rel="noopener noreferrer"
+      href="https://github.com/{{ site.github }}">
+      {% include svg/github.svg %}
+    </a>
+  </div>
+  
+  <div class="svg-link">
+    <a id="qiita" class="icon" title="Qiita" aria-label="Qiita" target="_blank" rel="noopener noreferrer"
+      href="https://qiita.com/{{site.qiita}}">
+      {% include svg/qiita.svg %}
+    </a>
+  </div>
+  <div class="svg-link">
+    <a id="wantedly" class="icon" title="Wantedly" aria-label="Wantedly" target="_blank" rel="noopener noreferrer"
+      href="https://www.wantedly.com/users/{{ site.wantedly}}">
+      {% include svg/wantedly.svg %}
+    </a>
+  </div>
+  <div class="svg-link">
+    <a id="linkedin" class="icon" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"
+      href="https://linkedin.com/in/{{ site.linkedin }}">
+      {% include svg/linkedin.svg %}
+    </a>
+  </div>
+  <div class=svg-link>
+    <a id=githubpage class=icon title=githubpage area-label=githubpage href=#>
+      {% include svg/qrGithubpageVector.svg %}
+    </a>
+  </div>
 </div>

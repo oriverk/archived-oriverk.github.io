@@ -45,10 +45,10 @@ ul{
 }
 
 a{
-  color: rgb(255, 165, 0);
+  color: #7bd0e7;
   text-decoration: none;
   &:hover{
-    color: #fe2401;
+    color: rgb(355,165,0);
   }
 }
 
@@ -64,7 +64,8 @@ hr {
   position: relative;
   margin: 3% auto;
   border-width: 0;
-  height: 3px;
+  height: .2rem;
+  // background-color: #469fb5;
   background-color: #ffbd42;
 }
 

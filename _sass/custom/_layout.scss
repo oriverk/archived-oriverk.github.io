@@ -1,16 +1,16 @@
-$tab:800px; 
+$tab:50rem; 
 @mixin tab {
   @media (min-width:($tab)) {
     @content;
   }
 }
-$pc:960px; 
+$pc:60rem; 
 @mixin pc {
   @media (min-width:($pc)) {
     @content;
   }
 }
-$sm:481px;
+$sm:30.1rem;
 @mixin sm {
   @media (min-width:($sm)){
     @content;
@@ -19,8 +19,10 @@ $sm:481px;
 
 body{
   min-height: 100vh;
-  background-color: rgb(61, 119, 238);
-  background:linear-gradient(90deg, rgb(123, 208, 231) 0%, rgb(0, 30, 144) 96%) fixed;
+  // background-color: rgb(61, 119, 238);
+  // background:linear-gradient(90deg, rgb(123, 208, 231) 0%, rgb(0, 30, 144) 96%) fixed;
+  // background-color:#121212;
+  background-color:#000;
   background-size: cover;
   background-attachment: fixed;
   background-size: cover;
@@ -48,13 +50,13 @@ body{
 }
 
 .wrap{
-  background-color: rgba(0, 0, 0, .767);
+  background-color: #121212;
   width: 95%;
   margin: 2% auto 5%;
   padding: 0 .7rem .7rem;
   border-radius: .3rem;
   @include tab{
-    width: 760px;
+    width: 47.5rem;
   }
 }
 
@@ -72,12 +74,12 @@ body{
   text-align: center;
   &:hover{
     svg{
-      fill: rgb(255, 165, 0);
+      fill: #7bd0e7;
       transition: .1s;
     }
   }
   @include tab{
-    width: 88px;
+    width: 5.5rem;
   }
 }
 
@@ -104,7 +106,7 @@ body{
 }
 
 .menu a.active{
-  background-color: rgb(255, 165, 0);
+  background-color: #7bd0e7;
   color: #000;
   font-weight: bold;
   svg{
@@ -133,7 +135,7 @@ body{
 
 .card svg, #cv-svg svg, .blog-list svg, .post svg{
     width: 1rem;
-    fill: rgb(255, 165, 0);
+    fill: #7bd0e7;
     margin-right: .5rem;
 }
 
@@ -149,14 +151,14 @@ body{
   }
 }
 
-.top .qr{
-  width: 34%;
-  margin: 3% auto;
-  @include tab{
-    width: 22%;
-    margin: 3% auto;
-  }
-}
+// .top .qr{
+//   width: 34%;
+//   margin: 3% auto;
+//   @include tab{
+//     width: 22%;
+//     margin: 3% auto;
+//   }
+// }
 
 .svg-links{
   margin-bottom: 2rem;
@@ -167,29 +169,43 @@ body{
       color: transparent;
     }
     svg{
-      width: 13%;
-      fill: rgb(236, 236, 236);
+      width: 1rem;
+      fill: #fff;
       @include tab{
-        width: 10%;
+        width: 3rem;
       }
     }
-    #wantedly, #linkedin svg{
-      width: 15%;
-      @include tab{
-        width: 12%;
-      }
-    }
+    // #wantedly, #linkedin svg{
+    //   width: 15%;
+    //   @include tab{
+    //     width: 12%;
+    //   }
+    // }
   }
 }
 
-#subscribe svg:hover{ fill: #ff8c00; }
+// #subscribe svg:hover{ fill: #ff8c00; }
 #github svg:hover{ 
-  fill: #24292e;
-  background-color:rgb(236, 236, 236);
+  // fill: #24292e;
+  // background-color:rgb(236, 236, 236);
+  fill: #7bd0e7;
 }
 #qiita svg:hover{ fill: #55c500; }
 #wantedly svg:hover{ fill: #00A4BB; }
 #linkedin svg:hover{ fill: #0077b5; }
+#githubpage svg:hover{ fill: #7bd0e7; }
+
+//experience
+// .experience.content{
+//   @include sm{
+//     p, h5{
+//       float: left;
+//     }
+//     ul:first-child{
+//       float: left;
+//     }
+//   }
+// }
 
 //skill
 .skill{
@@ -202,7 +218,7 @@ body{
       margin: 0 auto;
       padding: 1rem;
       padding-bottom: 0;
-      border-bottom: solid 2px rgb(255, 189, 66);
+      border-bottom: solid 2px #ffbd42;
       @include sm{
         width:40%;
       }
@@ -244,7 +260,7 @@ body{
   }
   h2 {
     text-align: left;
-    border-left: 0.32rem solid rgb(255, 165, 0);
+    border-left: 0.32rem solid #7bd0e7;
     margin: 2rem 0 .5rem 0;
     padding: .5rem 0 .5rem .5rem;
   }
