@@ -11,7 +11,7 @@ wantedly: 40069986
 linkedin: yudai-k
 lapras: CF9OBXY
 qiita: OriverK
-image: githubpages-prtsc1.jpg
+image: og-image.jpg
 google_analytics: UA-131793403-3
 
 # Build settings
@@ -23,15 +23,8 @@ highlighter: rouge
 
 plugins:
   - jekyll-feed
-  - jekyll-paginate
   - github-pages
   - jekyll-coffeescript
-  - jekyll-autoprefixer
-
-autoprefixer:
-  only_production: true
-  browsers:
-  - last 2 versions
 
 author:
   name: 'OriverK'

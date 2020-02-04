@@ -1,3 +1,5 @@
+<div id="githubpage-svg" class>{% include svg/qrGithubpageVector.svg %}</div>
+<img src="assets/images/profile-img400.webp" alt="Profile" id="profile-img" class="active">
 <h1>{{ site.title }}</h1>
 <h2>{{ site.description }}</h2>
 <h2>{{ site.sub-description }}</h2>
@@ -28,9 +30,5 @@
       {% include svg/linkedin.svg %}
     </a>
   </div>
-  <div class=svg-link>
-    <a id=githubpage class=icon title=githubpage area-label=githubpage href=#>
-      {% include svg/qrGithubpageVector.svg %}
-    </a>
-  </div>
 </div>
+{% include profile-img-js.html %}

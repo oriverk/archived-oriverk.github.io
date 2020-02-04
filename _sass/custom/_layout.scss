@@ -19,7 +19,6 @@ $sm:30.1rem;
 
 body{
   min-height: 100vh;
-  // background-color: rgb(61, 119, 238);
   // background:linear-gradient(90deg, rgb(123, 208, 231) 0%, rgb(0, 30, 144) 96%) fixed;
   // background-color:#121212;
   background-color:#000;
@@ -28,8 +27,8 @@ body{
   background-size: cover;
   color: #fff;
   // desable scroll bar
-  -ms-overflow-style: none; // IE
-  overflow:-moz-scrollbars-none; // Firefox
+  -ms-overflow-style: none;
+  overflow:-moz-scrollbars-none;
   &::-webkit-scrollbar { // Chrome
     display: none;
   }
@@ -52,11 +51,12 @@ body{
 .wrap{
   background-color: #121212;
   width: 95%;
-  margin: 2% auto 5%;
+  margin: 5% auto;
   padding: 0 .7rem .7rem;
   border-radius: .3rem;
   @include tab{
     width: 47.5rem;
+    margin: 2% auto;
   }
 }
 
@@ -116,7 +116,7 @@ body{
 
 .tab-text{
   display: none;
-  @include tab{
+  @include sm{
     display: inline-block;
     font-size: .8rem;
   }
@@ -142,6 +142,28 @@ body{
 // top
 .top{
   text-align: center;
+  img, #githubpage-svg{
+    display:none;
+  }
+  img.active{
+    display: inline-block;
+    margin: 1rem auto;
+    width: 10rem;
+    @include sm{
+      width: 15rem;
+    }
+  }
+  #githubpage-svg.active{
+    display:inline-block;
+    margin: 1rem auto;
+    svg{
+      fill: #7bd0e7;
+      width: 10rem;
+      @include sm{
+        width: 15rem;
+      }
+    }
+  }
   h1, h2{
     margin: 1rem auto;
   }
@@ -150,15 +172,6 @@ body{
     font-weight: bold;
   }
 }
-
-// .top .qr{
-//   width: 34%;
-//   margin: 3% auto;
-//   @include tab{
-//     width: 22%;
-//     margin: 3% auto;
-//   }
-// }
 
 .svg-links{
   margin-bottom: 2rem;
@@ -169,43 +182,35 @@ body{
       color: transparent;
     }
     svg{
-      width: 1rem;
+      width: 15%;
       fill: #fff;
-      @include tab{
+      @include sm{
         width: 3rem;
+        margin:0 1rem;
       }
     }
-    // #wantedly, #linkedin svg{
-    //   width: 15%;
-    //   @include tab{
-    //     width: 12%;
-    //   }
-    // }
   }
 }
 
-// #subscribe svg:hover{ fill: #ff8c00; }
-#github svg:hover{ 
-  // fill: #24292e;
-  // background-color:rgb(236, 236, 236);
-  fill: #7bd0e7;
-}
+#github svg:hover{ fill: #7bd0e7;}
 #qiita svg:hover{ fill: #55c500; }
 #wantedly svg:hover{ fill: #00A4BB; }
 #linkedin svg:hover{ fill: #0077b5; }
 #githubpage svg:hover{ fill: #7bd0e7; }
 
 //experience
-// .experience.content{
-//   @include sm{
-//     p, h5{
-//       float: left;
-//     }
-//     ul:first-child{
-//       float: left;
-//     }
-//   }
-// }
+@include sm{
+  .experience.content .flex{
+    display:flex;
+    p{
+      display:inline;
+    }
+    .parent{
+      display:inline-block;
+      margin-left: 2rem;
+    }
+  }
+}
 
 //skill
 .skill{
@@ -265,7 +270,11 @@ body{
     padding: .5rem 0 .5rem .5rem;
   }
   svg{
-    fill: rgb(135, 206, 235);
+    fill: #87ceeb;
+  }
+  p:first-of-type{
+    border-bottom: solid 0.25rem orange;
+    margin-bottom: 2rem;
   }
 }
 

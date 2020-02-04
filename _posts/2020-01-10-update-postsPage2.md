@@ -7,8 +7,7 @@ permalink: blog/:title
 ---
 
 # {{ page.title }}
-<span>{% include svg/tag.svg %}{% for tag in site.tags %}{{ tag[0] }},&nbsp;{% endfor %}</span>
-<span>Updated at&nbsp;{{ "now" | date: "%Y.%m.%d" }}</span><br>
+<span>{% include svg/tag.svg %}{% for tag in site.tags %}{{ tag[0] }},&nbsp;{% endfor %}&nbsp;Updated at&nbsp;{{ "now" | date: "%Y.%m.%d" }}</span>
 
 まず始めに、改修後のデザイン(色)は完全に自分好みに仕上げた。
 
@@ -23,8 +22,7 @@ permalink: blog/:title
 - Post.showページの追加
   - Syntax-highlighter Rougeの導入
 
-## 実内容
-### デザイン変更
+## デザイン変更
 [ページ表示速度](https://developers.google.com/speed/pagespeed/insights/?hl=JA&url=https%3A%2F%2Foriverk.github.io%2F&tab=mobile)を向上させるため、メニュータブにしか使っていないBootstrap由来のJSとCSSを排除し、自作のjsスクリプトを追加した。
 
 ```javascript
@@ -53,7 +51,7 @@ permalink: blog/:title
 </script>
 ```
 
-### Syntax-highlighter Rougeの導入
+## Syntax-highlighter Rougeの導入
 Posts.indexとPost.showページはjekyll通りなので割愛。
 コードのハイライトを有効化する為、Rougeを導入した。
 

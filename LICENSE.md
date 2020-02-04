@@ -6,7 +6,7 @@ permalink: /license/
 
 # Released under MIT License
 
-Copyright (c) 2019 Kawano Yudai.
+Copyright (c) 2020 Kawano Yudai.
  
 Github:[oriverk/oriverk.github.io](https://github.com/oriverk/oriverk.github.io)
 

@@ -1,0 +1,17 @@
+<script>
+  'use script';
+  {
+    const githubpage = document.getElementById('githubpage-svg');
+    const profile = document.getElementById('profile-img');
+
+    profile.addEventListener('click', ()=>{
+      profile.classList.remove('active');
+      githubpage.classList.add('active');
+    });
+
+    githubpage.addEventListener('click', ()=>{
+      githubpage.classList.remove('active');
+      profile.classList.add('active');
+    });
+  }
+</script>

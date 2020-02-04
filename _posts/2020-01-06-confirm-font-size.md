@@ -7,8 +7,7 @@ permalink: blog/:title
 ---
 
 # {{ page.title }}
-<span>{% include svg/tag.svg %}{% for tag in site.tags %}{{ tag[0] }},&nbsp;{% endfor %}</span>
-<span>Updated at&nbsp;{{ "now" | date: "%Y.%m.%d" }}</span>
+<span>{% include svg/tag.svg %}{% for tag in site.tags %}{{ tag[0] }},&nbsp;{% endfor %}&nbsp;Updated at&nbsp;{{ "now" | date: "%Y.%m.%d" }}</span>
 
 ## h2 tag あいうえお
 post一覧のページで、日付順に表示したいけど、わからない・・・
