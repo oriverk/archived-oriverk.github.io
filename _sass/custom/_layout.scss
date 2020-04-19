@@ -25,15 +25,6 @@ body{
   background-attachment: fixed;
   background-size: cover;
   color: #fff;
-  // desable scroll bar
-  -ms-overflow-style: none;
-  overflow:-moz-scrollbars-none;
-  &::-webkit-scrollbar { // Chrome
-    display: none;
-  }
-  @include tab{
-    -webkit-overflow-scrolling: touch;
-  }
 }
 
 /*スクロールバー全体*/
